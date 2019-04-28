@@ -101,6 +101,7 @@
                                 <thead class="flip-content">
                                     <tr>
                                         <th></th>
+                                        <th>Nomor Pembelian</th>
                                         <th>Item Name</th>
                                         <th>Request Information</th>
                                     </tr>
@@ -110,20 +111,20 @@
                             <script id="pembelian_detail" type="text/x-handlebars-template">
                                 <table class="table table-striped table-bordered">
                                     <tr>
-                                        <td style="width: 10%">Supplier Name</td>
+                                        <td style="width: 15%">Supplier Name</td>
                                         <td>@{{name}}</td>
                                     </tr>
                                     <tr>
-                                        <td style="width: 10%">Number of Items</td>
+                                        <td>Number of Items</td>
                                         <td>@{{jumlah_barang}}</td>
                                     </tr>
                                     <tr>
-                                        <td style="width: 10%">Purchase Price</td>
+                                        <td>Purchase Price</td>
                                         <td>@{{harga_beli}}</td>
                                     </tr>
                                     <tr>
-                                        <td style="width: 10%">Total Price</td>
-                                        <td>@{{total_harga}}</td>
+                                        <td>Total Price</td>
+                                        <td>@{{jumlah_harga}}</td>
                                     </tr>
                                 </table>
                             </script>

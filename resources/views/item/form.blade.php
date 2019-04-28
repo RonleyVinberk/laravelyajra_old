@@ -101,13 +101,13 @@
                                 <div class="form-group">
                                     <label class="col-md-3 control-label">Price</label>
                                     <div class="col-md-2">
-                                    {{Form::number('price', NULL, ['id' => 'item_price_store', 'class'=> 'form-control'])}}
+                                    {{Form::text('price', NULL, ['id' => 'item_price_store', 'class'=> 'form-control'])}}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label">Purchase Price</label>
                                     <div class="col-md-2">
-                                    {{Form::number('harga_beli', NULL, ['id' => 'item_harga_beli_store', 'class'=> 'form-control'])}}
+                                    {{Form::text('harga_beli', NULL, ['id' => 'item_harga_beli_store', 'class'=> 'form-control'])}}
                                     </div>
                                 </div>
                                 <div class="form-group">

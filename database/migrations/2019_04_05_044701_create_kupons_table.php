@@ -15,6 +15,7 @@ class CreateKuponsTable extends Migration
     {
         Schema::create('kupons', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('kupon_kode')->nullable();
             $table->integer('jumlah')->unsigned()->default(0);
             $table->integer('created_on')->nullable();
             $table->integer('updated_on')->nullable();

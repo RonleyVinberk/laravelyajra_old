@@ -124,7 +124,7 @@
                                     </tr>
                                     <tr>
                                         <td>Total Price</td>
-                                        <td>@{{total_harga}}</td>
+                                        <td>@{{jumlah_harga}}</td>
                                     </tr>
                                 </table>
                             </script>

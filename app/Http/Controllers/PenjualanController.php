@@ -29,7 +29,7 @@ class PenjualanController extends Controller
             ->join('barangs', 'penjualans.barang_id', '=', 'barangs.id')
             ->join('kupons', 'penjualans.kupon_id', '=', 'kupons.id')
             ->join('customers', 'penjualans.customer_id', '=', 'customers.id')
-            ->select(['penjualans.id', 'penjualans.nomor_penjualan', 'penjualans.jumlah_barang', 'penjualans.total_harga', 'barangs.barang_name', 'barangs.price', 'customers.name', 'kupons.jumlah']);
+            ->select(['penjualans.id', 'penjualans.nomor_penjualan', 'penjualans.jumlah_barang', 'penjualans.jumlah_harga', 'barangs.barang_name', 'barangs.price', 'customers.name', 'kupons.jumlah']);
             
             return Datatables::of($sales_lists)
             ->addColumn('details_url', function ($sales_list) {
@@ -82,7 +82,7 @@ class PenjualanController extends Controller
             'diskon_id', 
             'customer_id'
         );
-        $dataInput['nomor_penjualan'] = "IB".rand();
+        $dataInput['nomor_penjualan'] = "IB-S".rand();
 
 		// Lakukan validasi
 		$validator = Validator::make($dataInput, $rules, $messages);

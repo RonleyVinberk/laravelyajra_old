@@ -17,7 +17,7 @@ class CreatePenjualansTable extends Migration
             $table->increments('id');
             $table->string('nomor_penjualan', 25);
             $table->integer('jumlah_barang')->unsigned()->default(0);
-            $table->integer('total_harga')->unsigned()->default(0)->nullable();
+            $table->integer('jumlah_harga')->unsigned()->default(0)->nullable();
             $table->integer('kupon_id')->unsigned()->nullable();
             $table->integer('barang_id')->unsigned();
             $table->integer('customer_id')->unsigned();

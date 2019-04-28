@@ -18,6 +18,7 @@ class CreateSuppliersTable extends Migration
             $table->string('name');
             $table->string('email', 40)->nullable();
             $table->string('nomor_telepon', 15);
+            $table->string('contact_person');
             $table->string('alamat');
             $table->integer('created_on')->nullable();
             $table->integer('updated_on')->nullable();

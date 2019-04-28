@@ -19,6 +19,8 @@ class CreateCustomersTable extends Migration
             $table->string('email', 40)->nullable();
             $table->string('nomor_telepon', 15);
             $table->string('alamat');
+            $table->string('status')->nullable();
+            $table->integer('kupon_id')->nullable();
             $table->integer('created_on')->nullable();
             $table->integer('updated_on')->nullable();
         });

@@ -15,6 +15,7 @@ var table = $('#pembelian_table').DataTable({
             "searchable": false,
             "defaultContent": ''
         },
+        {data: 'nomor_pembelian', name: 'nomor_pembelian'},
         {data: 'barang_name', name: 'barangs.barang_name'},
         {data: 'keterangan_permintaan', name: 'keterangan_permintaan'},
     ]

@@ -26,7 +26,7 @@ class PembelianController extends Controller
             $purchase_lists = DB::table('pembelians')
             ->join('barangs', 'pembelians.barang_id', '=', 'barangs.id')
             ->join('suppliers', 'barangs.supplier_id', '=', 'suppliers.id')
-            ->select(['pembelians.id', 'pembelians.keterangan_permintaan', 'pembelians.jumlah_barang', 'pembelians.total_harga', 'barangs.barang_name', 'barangs.harga_beli', 'suppliers.name']);
+            ->select(['pembelians.id', 'pembelians.nomor_pembelian', 'pembelians.keterangan_permintaan', 'pembelians.jumlah_barang', 'pembelians.jumlah_harga', 'barangs.barang_name', 'barangs.harga_beli', 'suppliers.name']);
             
             return Datatables::of($purchase_lists)
             ->addColumn('details_url', function ($purchase_list) {
@@ -74,7 +74,8 @@ class PembelianController extends Controller
         );
 
 		// Lakukan validasi
-		$validator = Validator::make($dataInput, $rules, $messages);
+        $validator = Validator::make($dataInput, $rules, $messages);
+        $dataInput['nomor_pembelian'] = "IB-P".rand();
 
 		// Redirect jika gagal validasi
 		if ($validator->fails()) {
